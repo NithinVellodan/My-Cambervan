@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <Header>
       <LeftContainer>
-        <Heading>My Cambervan</Heading>
+        <Heading>My Cambervans</Heading>
         <Form>
           <Input type="text" placeholder="Search cambervan..." />
           <Search>
