@@ -7,6 +7,7 @@ import car from "../assets/car.svg";
 import calender from "../assets/calender.svg";
 import save from "../assets/save.svg";
 import message from "../assets/message.svg";
+import { NavLink } from "react-router-dom";
 // import car from "../assets/car.svg";
 
 function SideBar() {
@@ -14,27 +15,37 @@ function SideBar() {
     <MenuList>
       <Item>
         <WidgetAll>
-          <Icon src={menu} alt="menu" />
+          <NavLink to="/coming-soon">
+            <Icon src={menu} alt="menu" />
+          </NavLink>
         </WidgetAll>
       </Item>
       <Item>
         <Widget>
-          <Icon src={car} alt="trip" />
+          <NavLink to="/">
+            <Icon src={car} alt="trip" />
+          </NavLink>
         </Widget>
       </Item>
       <Item>
         <WidgetCalender>
-          <Icon src={calender} alt="calender" />
+          <NavLink to="/coming-soon">
+            <Icon src={calender} alt="calender" />
+          </NavLink>
         </WidgetCalender>
       </Item>
       <Item>
         <WidgetNote>
-          <Icon src={save} alt="save" />
+          <NavLink to="/coming-soon">
+            <Icon src={save} alt="save" />
+          </NavLink>
         </WidgetNote>
       </Item>
       <Item>
         <WidgetChat>
-          <Icon src={message} alt="message" />
+          <NavLink to="/coming-soon">
+            <Icon src={message} alt="message" />
+          </NavLink>
         </WidgetChat>
       </Item>
     </MenuList>
@@ -45,7 +56,7 @@ export default SideBar;
 
 const MenuList = styled.ul`
   width: 30%;
-  margin: 0 auto;
+  padding-left: 100px;
 `;
 const Item = styled.li`
   margin-bottom: 80px;
