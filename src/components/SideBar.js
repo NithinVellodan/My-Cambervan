@@ -1,38 +1,40 @@
 import React from "react";
 import styled from "styled-components";
 
+// images
+import menu from "../assets/menu.svg";
+import car from "../assets/car.svg";
+import calender from "../assets/calender.svg";
+import save from "../assets/save.svg";
+import message from "../assets/message.svg";
+// import car from "../assets/car.svg";
+
 function SideBar() {
   return (
     <MenuList>
       <Item>
         <WidgetAll>
-          <Icon src={require("../src/assets/menu.svg").default} alt="menu" />
+          <Icon src={menu} alt="menu" />
         </WidgetAll>
       </Item>
       <Item>
         <Widget>
-          <Icon src={require("../src/assets/car.svg").default} alt="trip" />
+          <Icon src={car} alt="trip" />
         </Widget>
       </Item>
       <Item>
         <WidgetCalender>
-          <Icon
-            src={require("../src/assets/calender.svg").default}
-            alt="calender"
-          />
+          <Icon src={calender} alt="calender" />
         </WidgetCalender>
       </Item>
       <Item>
         <WidgetNote>
-          <Icon src={require("../src/assets/save.svg").default} alt="save" />
+          <Icon src={save} alt="save" />
         </WidgetNote>
       </Item>
       <Item>
         <WidgetChat>
-          <Icon
-            src={require("../src/assets/message.svg").default}
-            alt="message"
-          />
+          <Icon src={message} alt="message" />
         </WidgetChat>
       </Item>
     </MenuList>

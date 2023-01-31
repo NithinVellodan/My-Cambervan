@@ -10,7 +10,7 @@ function Navbar() {
           <Input type="text" placeholder="Search cambervan..." />
           <Search>
             <SearchImage
-              src={require("../src/assets/search.svg").default}
+              src={require("../assets/search.svg").default}
               alt="search"
             />
           </Search>
@@ -19,7 +19,7 @@ function Navbar() {
       <RightContainer>
         <Avatar>
           <AvatarImage
-            src={require("../src/assets/login-avatar.jpg")}
+            src={require("../assets/login-avatar.jpg")}
             alt="avatar"
           />
         </Avatar>
@@ -29,7 +29,7 @@ function Navbar() {
             <UserName>@danikuillustrator</UserName>
             <Arrow>
               <ArrowImage
-                src={require("../src/assets/arrow.svg").default}
+                src={require("../assets/arrow.svg").default}
                 alt="arrow"
               />
             </Arrow>
@@ -53,7 +53,7 @@ const LeftContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
+  width: 60%;
 `;
 const Heading = styled.h1`
   font-size: 35px;
@@ -64,12 +64,12 @@ const Form = styled.form`
   justify-content: space-between;
   background: #9a9a9a37;
   padding: 18px 30px;
-  width: 70%;
+  width: 60%;
   border-radius: 15px;
 `;
 const Input = styled.input`
   font-family: "LatoBold";
-  font-size: 18px;
+  font-size: 17px;
   opacity: 0.7;
 `;
 const Search = styled.div`
