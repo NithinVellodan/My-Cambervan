@@ -10,7 +10,9 @@ function Main() {
   return (
     <Router>
       <Navbar />
-      <SideBar />
+      <MenuBar>
+        <SideBar />
+      </MenuBar>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/coming-soon" element={<Comingsoon />} />
@@ -21,9 +23,6 @@ function Main() {
 
 export default Main;
 
-const SubContainer = styled.section`
-  display: flex;
-`;
 const MenuBar = styled.aside`
   width: 7%;
 `;

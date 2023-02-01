@@ -56,31 +56,15 @@ export default SideBar;
 
 const MenuList = styled.ul`
   width: 30%;
-  padding-left: 100px;
+  margin: 0 auto;
 `;
 const Item = styled.li`
   margin-bottom: 80px;
-  position: relative;
   &:last-child {
     margin-bottom: 0;
   }
   &:first-child {
     margin-top: 10px;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    left: -5px;
-    width: 40px;
-    height: 42px;
-    background-color: #fe91727d;
-    border-radius: 12px;
-    z-index: -1;
-    display: none;
-  }
-  &:hover::after {
-    display: block;
   }
 `;
 const Widget = styled.div`

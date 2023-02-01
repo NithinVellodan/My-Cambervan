@@ -47,7 +47,7 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0 100px 0 180px;
-  height: 150px;
+  height: 120px;
 `;
 const LeftContainer = styled.div`
   display: flex;
