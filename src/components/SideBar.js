@@ -15,37 +15,37 @@ function SideBar() {
     <MenuList>
       <Item>
         <WidgetAll>
-          <NavLink to="/coming-soon">
+          <NavLinks to="/dashboard">
             <Icon src={menu} alt="menu" />
-          </NavLink>
+          </NavLinks>
         </WidgetAll>
       </Item>
       <Item>
         <Widget>
-          <NavLink to="/">
+          <NavLinks to="/">
             <Icon src={car} alt="trip" />
-          </NavLink>
+          </NavLinks>
         </Widget>
       </Item>
       <Item>
         <WidgetCalender>
-          <NavLink to="/coming-soon">
+          <NavLinks to="/calender">
             <Icon src={calender} alt="calender" />
-          </NavLink>
+          </NavLinks>
         </WidgetCalender>
       </Item>
       <Item>
         <WidgetNote>
-          <NavLink to="/coming-soon">
+          <NavLinks to="/note">
             <Icon src={save} alt="save" />
-          </NavLink>
+          </NavLinks>
         </WidgetNote>
       </Item>
       <Item>
         <WidgetChat>
-          <NavLink to="/coming-soon">
+          <NavLinks to="/message">
             <Icon src={message} alt="message" />
-          </NavLink>
+          </NavLinks>
         </WidgetChat>
       </Item>
     </MenuList>
@@ -68,23 +68,23 @@ const Item = styled.li`
   }
 `;
 const Widget = styled.div`
-  width: 30px;
+  width: 40px;
   display: block;
 `;
 const WidgetAll = styled.div`
-  width: 30px;
+  width: 40px;
   display: block;
 `;
 const WidgetCalender = styled.div`
-  width: 30px;
+  width: 40px;
   display: block;
 `;
 const WidgetNote = styled.div`
-  width: 30px;
+  width: 40px;
   display: block;
 `;
 const WidgetChat = styled.div`
-  width: 30px;
+  width: 40px;
   display: block;
 `;
 const Icon = styled.img`
@@ -93,5 +93,17 @@ const Icon = styled.img`
   filter: grayscale();
   &:hover {
     filter: none;
+  }
+`;
+const NavLinks = styled(NavLink)`
+  display: block;
+  width: 100%;
+  padding: 5px;
+  &.active {
+    background: #ffa500bd;
+    border-radius: 10px;
+    img {
+      filter: saturate(0%) contrast(0%) invert(0%) hue-rotate(0%);
+    }
   }
 `;

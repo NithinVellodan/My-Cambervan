@@ -15,7 +15,10 @@ function Main() {
       </MenuBar>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/coming-soon" element={<Comingsoon />} />
+        <Route path="/dashboard" element={<Comingsoon />} />
+        <Route path="/calender" element={<Comingsoon />} />
+        <Route path="/note" element={<Comingsoon />} />
+        <Route path="/message" element={<Comingsoon />} />
       </Routes>
     </Router>
   );

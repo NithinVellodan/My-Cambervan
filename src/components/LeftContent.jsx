@@ -29,7 +29,9 @@ function LeftContent() {
             </ContainerImage>
           </SubImgContainer>
         </TopContainer>
-        <BottomContainer></BottomContainer>
+        <BottomContainer>
+            
+        </BottomContainer>
       </LeftContainer>
       <RightContainer></RightContainer>
     </MainContainer>
