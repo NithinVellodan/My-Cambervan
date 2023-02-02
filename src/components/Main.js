@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./LandingPage";
 import Comingsoon from "./Comingsoon";
 
+
 function Main() {
   return (
     <Router>

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Radio from "./Radio";
 
 function LeftContent() {
   return (
@@ -112,11 +113,44 @@ function LeftContent() {
             </Include>
           </BottomLeft>
           <BottomRight>
-            
+            <Owner>
+              <OwnerTitle>Owner</OwnerTitle>
+              <OwnerDetails>
+                <OwnerBio>
+                  <OwnerImage>
+                    <OwnerImg
+                      alt="owner"
+                      src={require("../assets/owner-avatar.jpg")}
+                    />
+                  </OwnerImage>
+                  <OwnerId>
+                    <OwnerName>Charlie Septimus</OwnerName>
+                    <OwnerUserName>@chatliesetimusvan</OwnerUserName>
+                  </OwnerId>
+                </OwnerBio>
+                <OwnerContactDetails>
+                  <OwnerMessage>
+                    <MessageImg
+                      alt="message"
+                      src={require("../assets/message-fill.svg").default}
+                    />
+                  </OwnerMessage>
+                  <OwnerPhone>
+                    <PhoneImg
+                      alt="phone"
+                      src={require("../assets/call.svg").default}
+                    />
+                  </OwnerPhone>
+                </OwnerContactDetails>
+              </OwnerDetails>
+            </Owner>
+            <InsuranceDetails>
+              {" "}
+              <Radio />
+            </InsuranceDetails>
           </BottomRight>
         </BottomContainer>
       </LeftContainer>
-      <RightContainer></RightContainer>
     </MainContainer>
   );
 }
@@ -135,12 +169,14 @@ const LeftContainer = styled.div`
   border-radius: 12px;
 `;
 
-const RightContainer = styled.div``;
 const TopContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-const BottomContainer = styled.div``;
+const BottomContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 const MainImgContainer = styled.div`
   width: 75%;
 `;
@@ -343,4 +379,179 @@ const FacilityContent = styled.span`
   display: inline-block;
   font-family: "LatoBold";
 `;
-const BottomRight = styled.div``;
+const BottomRight = styled.div`
+  width: 35%;
+  /* margin-right: 30%; */
+`;
+
+//leftRightContainer////////////////////////////////
+
+// const RightL = styled.div``;
+const Owner = styled.div`
+  margin-bottom: 95px;
+  @media all and (max-width: 1440px) {
+    margin-top: 25px;
+    margin-bottom: 100px;
+  }
+  @media all and (max-width: 768px) {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  @media all and (max-width: 768px) {
+    width: 40%;
+  }
+  @media all and (max-width: 480px) {
+    width: 100%;
+  }
+  @media all and (max-width: 480px) {
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+`;
+const OwnerDetails = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media all and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+`;
+const OwnerTitle = styled.h4`
+  font-size: 25px;
+  font-family: "LatoBold";
+  margin-bottom: 12px;
+  @media all and (max-width: 1440px) {
+    font-size: 28px;
+  }
+  @media all and (max-width: 1280px) {
+    font-size: 25px;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 30px;
+  }
+  @media all and (max-width: 480px) {
+    font-size: 25px;
+  }
+`;
+const OwnerBio = styled.div`
+  display: flex;
+  width: 75%;
+  align-items: center;
+  @media all and (max-width: 1280px) {
+    flex-wrap: wrap;
+  }
+  @media all and (max-width: 480px) {
+    width: 80%;
+  }
+`;
+const OwnerImage = styled.div`
+  width: 18%;
+  margin-right: 10px;
+  @media all and (max-width: 1440px) {
+    width: 22%;
+  }
+  @media all and (max-width: 1280px) {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  @media all and (max-width: 480px) {
+    width: 25%;
+    margin-bottom: 0;
+  }
+`;
+const OwnerImg = styled.img`
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+`;
+const OwnerId = styled.div``;
+const OwnerName = styled.h2`
+  font-size: 20px;
+  font-family: "LatoBold";
+  margin-bottom: 10px;
+  @media all and (max-width: 1440px) {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  @media all and (max-width: 1280px) {
+    font-size: 20px;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  @media all and (max-width: 480px) {
+    font-size: 15px;
+  }
+`;
+const OwnerUserName = styled.blockquote`
+  font-size: 18px;
+  font-family: "LatoBold";
+  opacity: 0.4;
+  @media all and (max-width: 1440px) {
+    font-size: 16px;
+  }
+  font-size: 14px;
+`;
+const OwnerContactDetails = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 25%;
+  @media all and (max-width: 1280px) {
+    width: 38%;
+  }
+  @media all and (max-width: 768px) {
+    margin-top: 25px;
+  }
+  @media all and (max-width: 768px) {
+    width: 50%;
+  }
+  @media all and (max-width: 480px) {
+    width: 35%;
+    margin-top: 15px;
+  }
+`;
+
+const OwnerMessage = styled.div`
+  width: 45%;
+  background: #ff724a66;
+  padding: 10px;
+  border-radius: 15px;
+  @media all and (max-width: 1440px) {
+    width: 48%;
+  }
+`;
+const MessageImg = styled.img`
+  display: block;
+  width: 100%;
+`;
+const OwnerPhone = styled.div`
+  width: 45%;
+  background: #379e635e;
+  padding: 10px;
+  border-radius: 15px;
+  @media all and (max-width: 1440px) {
+    width: 48%;
+  }
+`;
+const PhoneImg = styled.img`
+  display: block;
+  width: 100%;
+`;
+const InsuranceDetails = styled.div`
+  width: 100%;
+  @media all and (max-width: 768px) {
+    width: 60%;
+  }
+  @media all and (max-width: 480px) {
+    width: 100%;
+  }
+`;
+// const LeftContainerRight = styled.div`
+//   width: 30%;
+//   margin-left: 20px;
+//   @media all and (max-width: 980px) {
+//     display: none;
+//   }
+// `;
