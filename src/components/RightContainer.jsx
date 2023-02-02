@@ -11,6 +11,6 @@ const MainContainer = styled.div`
   width: 30%;
   margin-left: 20px;
   height: 80vh;
-  border-radius: 15px;
+  border-radius: 15pxyn;
   background: #fff;
 `;
