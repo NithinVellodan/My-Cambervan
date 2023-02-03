@@ -55,11 +55,12 @@ function SideBar() {
 export default SideBar;
 
 const MenuList = styled.ul`
-  width: 30%;
+  width: 40%;
   margin: 0 auto;
 `;
 const Item = styled.li`
   margin-bottom: 80px;
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -68,23 +69,23 @@ const Item = styled.li`
   }
 `;
 const Widget = styled.div`
-  width: 40px;
+  width: 43px;
   display: block;
 `;
 const WidgetAll = styled.div`
-  width: 40px;
+  width: 43px;
   display: block;
 `;
 const WidgetCalender = styled.div`
-  width: 40px;
+  width: 43px;
   display: block;
 `;
 const WidgetNote = styled.div`
-  width: 40px;
+  width: 43px;
   display: block;
 `;
 const WidgetChat = styled.div`
-  width: 40px;
+  width: 43px;
   display: block;
 `;
 const Icon = styled.img`
@@ -98,12 +99,13 @@ const Icon = styled.img`
 const NavLinks = styled(NavLink)`
   display: block;
   width: 100%;
-  padding: 5px;
+  padding: 7px;
+  border-radius: 5px;
   &.active {
-    background: #ffa500bd;
+    background: #ffd7cc;
     border-radius: 10px;
     img {
-      filter: saturate(0%) contrast(0%) invert(0%) hue-rotate(0%);
+      filter: saturate(0%) contrast(0%) invert(0%) hue-rotate(0);
     }
   }
 `;

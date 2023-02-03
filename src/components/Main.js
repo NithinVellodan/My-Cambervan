@@ -5,11 +5,13 @@ import styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./LandingPage";
 import Comingsoon from "./Comingsoon";
+import Preloader from "./Preloader/Preloader";
 
 
 function Main() {
   return (
     <Router>
+      <Preloader/>
       <Navbar />
       <MenuBar>
         <SideBar />

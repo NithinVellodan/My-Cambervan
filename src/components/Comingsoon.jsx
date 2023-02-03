@@ -1,20 +1,23 @@
-import React from 'react'
+import React from "react";
 import styled from "styled-components";
 
 function Comingsoon() {
   return (
-    <Container>Coming Soon...</Container>
-  )
+    <Container>
+      <ComingSoonImage src={require("../assets/comingsoon.jpg")} alt="Coming" />
+    </Container>
+  );
 }
 
-export default Comingsoon
-const Container = styled.div`
-  width: 90%;
-  position: absolute;
-  right: 0;
-  top: 166px;
-  font-size: 50px;
-  text-align: center;
-  padding: 100px;
-  font-weight: 700;
+export default Comingsoon;
+const Container = styled.section`
+  margin:  0 auto;
+  width: 30%;
+  background-color: aliceblue;
+`;
+
+const ComingSoonImage = styled.img`
+margin-top: -500px;
+  width: 100%;
+  display: block;
 `;
