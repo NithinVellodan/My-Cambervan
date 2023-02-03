@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import Popup from "./Popup";
 import Radio from "./Radio";
 
 function LeftContent() {
+  const [pop, setPop] = useState(false);
   return (
     <MainContainer>
       <LeftContainer>
@@ -22,12 +24,44 @@ function LeftContent() {
                 alt="car-image"
               />
             </ContainerImage>
-            <ContainerImage>
+            <ContainerImage
+              onClick={() => {
+                if (true === Boolean(pop)) {
+                  setPop(false);
+                } else {
+                  setPop(true);
+                }
+              }}
+            >
               <ContainerImg
                 src={require("../assets/bottom-image.jpg")}
                 alt="car-image"
               />
             </ContainerImage>
+
+            {pop && (
+              <>
+                <div
+                  onClick={() => {
+                    setPop(false);
+                  }}
+                  style={{
+                    position: "fixed",
+                    right: "0%",
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    height: "100%",
+                    zIndex: "10",
+                    bottom: "0%",
+                  }}
+                ></div>
+                <SliderBox>
+                  <Popup />
+                </SliderBox>
+              </>
+            )}
           </SubImgContainer>
         </TopContainer>
         <BottomContainer>
@@ -546,6 +580,21 @@ const InsuranceDetails = styled.div`
   }
   @media all and (max-width: 480px) {
     width: 100%;
+  }
+`;
+const SliderBox = styled.div`
+  position: absolute;
+  z-index: 100;
+  right: 400px;
+  top: 35%;
+  @media all and (max-width: 1080px) {
+    right: 330px;
+  }
+  @media all and (max-width: 980px) {
+    right: 60px;
+  }
+  @media all and (max-width: 640px) {
+    right: 43px;
   }
 `;
 // const LeftContainerRight = styled.div`
