@@ -46,28 +46,33 @@ function Popup() {
   ]);
 
   const renderImg = () => {
-    return images.map((image) => {
+    return images.map((image) => (
       <Items>
         <Img src={image.image} />
-      </Items>;
-    });
+      </Items>
+    ));
   };
 
   return (
-    <ImageDiv>
-      <List>{renderImg}</List>
-    </ImageDiv>
+    <Div>
+      <List>{renderImg()}</List>
+    </Div>
   );
 }
 
 export default Popup;
 
 const Div = styled.div`
-  width: 500px;
-  height: 500px;
+  width: 1300px;
+  height: 800px;
   border: 2px solid #fff;
   background: #4b4b4ba8;
   border-radius: 20px;
+  overflow: scroll;
+  padding: 50px;
+  ::-webkit-scrollbar {
+    display: none;
+  }
   @media all and (max-width: 1080px) {
     height: 300px;
   }
@@ -79,10 +84,19 @@ const Div = styled.div`
     height: 230px;
   }
 `;
-const Items = styled.div`
-display: block;
-width: 100%;
+const Items = styled.li`
+  width: 32%;
+  margin-bottom: 20px;
 `;
-const Img = styled.img``;
-const ImageDiv = styled.div``;
-const List = styled.div``;
+const Img = styled.img`
+  display: block;
+  width: 100%;
+  height: 250px;
+`;
+const List = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 500px;
+  flex-wrap: wrap;
+`;

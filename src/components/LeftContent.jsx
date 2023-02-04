@@ -25,12 +25,9 @@ function LeftContent() {
               />
             </ContainerImage>
             <ContainerImage
+              className="hi"
               onClick={() => {
-                if (true === Boolean(pop)) {
-                  setPop(false);
-                } else {
-                  setPop(true);
-                }
+                pop ? setPop(false) : setPop(true);
               }}
             >
               <ContainerImg
@@ -585,8 +582,8 @@ const InsuranceDetails = styled.div`
 const SliderBox = styled.div`
   position: absolute;
   z-index: 100;
-  right: 400px;
-  top: 35%;
+  left: 230px;
+  top: 6%;
   @media all and (max-width: 1080px) {
     right: 330px;
   }
